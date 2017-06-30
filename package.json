@@ -1,0 +1,16 @@
+{
+  "name": "reddit-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "pushover-notifications": "^0.2.4",
+    "snoocore": "^3.3.1"
+  }
+}
