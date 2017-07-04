@@ -10,7 +10,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "moment": "^2.18.1",
     "pushover-notifications": "^0.2.4",
-    "snoocore": "^3.3.1"
+    "snoocore": "^3.3.1",
+    "tzloc": "^1.5.2"
   }
 }
