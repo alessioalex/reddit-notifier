@@ -1,12 +1,7 @@
-// NOTIFIER_PERIOD="Los Angeles, 8:10AM-5PM" node is-between.js
 const moment = require('moment');
 const tzloc = require('tzloc');
-const period = process.env.NOTIFIER_PERIOD;
 
-// const [location, time] = period.split(',').map(d => d.trim());
-// const [timeStart, timeEnd] = time.split('-');
-
-module.exports = function isGoodTime(location, timeStart, timeEnd) {
+function isItAGoodTime(location, timeStart, timeEnd, cb) {
   tzloc('now', null, location, (err, d) => {
     if (err) { return cb(err); }
 
@@ -18,3 +13,5 @@ module.exports = function isGoodTime(location, timeStart, timeEnd) {
     cb(null, isBetween);
   });
 }
+
+module.exports = isItAGoodTime;
